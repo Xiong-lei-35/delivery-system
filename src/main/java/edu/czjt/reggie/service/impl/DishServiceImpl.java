@@ -15,6 +15,11 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ *@Author zhang_bingru20855066
+ *@Date 2023/6/15 17:57
+*/
+
 @Service
 public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements DishService {
 
@@ -29,9 +34,11 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
         Dish dish = this.getById(id);
         if (dish != null) {
             BeanUtils.copyProperties(dish, dishDto);
+            
             // 获取flavors
             List<DishFlavor> flavors = dishFlavorService.getFlavorsByDishId(id);
             dishDto.setFlavors(flavors);
+            
         }
         return dishDto;
     }
@@ -53,4 +60,5 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
         dishFlavorService.saveBatch(flavors);
 
     }
+    
 }
