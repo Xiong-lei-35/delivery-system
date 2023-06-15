@@ -14,7 +14,7 @@ import java.io.IOException;
 
 /**
  * 对指定路径进行用户登录状态检查。
- * Created by jinkun.tian on 2023/3/20
+
  */
 @WebFilter(filterName = "loginCheckFilter", urlPatterns = "/*")
 @Slf4j
