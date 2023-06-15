@@ -10,4 +10,5 @@ import edu.czjt.reggie.entity.AddressBook;
 
 public interface AddressBookService extends IService<AddressBook> {
 
+  
 }
