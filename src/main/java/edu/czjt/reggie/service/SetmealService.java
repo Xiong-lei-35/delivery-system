@@ -7,7 +7,13 @@ import edu.czjt.reggie.entity.Setmeal;
 
 import java.util.List;
 
+/**
+ *@Author zhang_bingru20855066
+ *@Date 2023/6/15 17:57
+*/
+
 public interface SetmealService extends IService<Setmeal> {
+    
     /**
      * 新增套餐，同时需要保存套餐和菜品的关联关系
      * @param setmealDto
