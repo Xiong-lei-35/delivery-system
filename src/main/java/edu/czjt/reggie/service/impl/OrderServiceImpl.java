@@ -21,6 +21,11 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+/**
+ *@Author zhang_bingru20855066
+ *@Date 2023/6/15 17:57
+*/
+
 @Service
 @Slf4j
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Orders> implements OrderService {
@@ -42,6 +47,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Orders> implement
      *
      * @param orders
      */
+    
     @Transactional
     public void submit(Orders orders) {
         //获得当前用户id
@@ -143,4 +149,5 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Orders> implement
         this.save(orders);
         orderDetailService.saveBatch(orderDetails);
     }
+    
 }
